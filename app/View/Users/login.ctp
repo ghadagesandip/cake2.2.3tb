@@ -14,7 +14,9 @@
     <div class="container-fluid">
         
         <div class="row-fluid">
+
     <div class="dialog span4">
+                <center>   <?php  echo $this->Session->flash('flash'); ?><br/></center>
         <div class="block">
             <div class="block-heading">Sign In</div>
             <div class="block-body">
@@ -26,7 +28,7 @@
                      echo $this->Form->input('email_address',array('class'=>'span12'));
                      echo $this->Form->input('password',array('class'=>'span12'));
                     
-                     echo $this->Session->flash('flash'); 
+
                      
                     echo $this->Form->submit('Login',array('type'=>'submit','class'=>'btn btn-primary pull-right'));
                ?>
