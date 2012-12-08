@@ -13,6 +13,8 @@
 	<tr>
 			<th><?php echo $this->Paginator->sort('id');?></th>
 			<th><?php echo $this->Paginator->sort('group_name');?></th>
+			<th><?php echo $this->Paginator->sort('slug');?></th>
+			<th><?php echo $this->Paginator->sort('is_deleted');?></th>
 			<th><?php echo $this->Paginator->sort('created');?></th>
 			<th><?php echo $this->Paginator->sort('modified');?></th>
 			<th class="actions"><?php echo __('Actions');?></th>
@@ -22,6 +24,8 @@
 	<tr>
 		<td><?php echo h($group['Group']['id']); ?>&nbsp;</td>
 		<td><?php echo h($group['Group']['group_name']); ?>&nbsp;</td>
+		<td><?php echo h($group['Group']['slug']); ?>&nbsp;</td>
+		<td><?php echo h($group['Group']['is_deleted']); ?>&nbsp;</td>
 		<td><?php echo h($group['Group']['created']); ?>&nbsp;</td>
 		<td><?php echo h($group['Group']['modified']); ?>&nbsp;</td>
 		<td class="actions">

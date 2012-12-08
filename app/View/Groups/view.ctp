@@ -23,6 +23,16 @@
 			<?php echo h($group['Group']['group_name']); ?>
 			&nbsp;
 		</dd>
+		<dt><?php echo __('Slug'); ?></dt>
+		<dd>
+			<?php echo h($group['Group']['slug']); ?>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('Is Deleted'); ?></dt>
+		<dd>
+			<?php echo h($group['Group']['is_deleted']); ?>
+			&nbsp;
+		</dd>
 		<dt><?php echo __('Created'); ?></dt>
 		<dd>
 			<?php echo h($group['Group']['created']); ?>
@@ -46,9 +56,25 @@
 			<table class="table">
 				<tr>
 							<th><?php echo __('Id'); ?></th>
+		<th><?php echo __('Group Id'); ?></th>
 		<th><?php echo __('Username'); ?></th>
 		<th><?php echo __('Password'); ?></th>
-		<th><?php echo __('Group Id'); ?></th>
+		<th><?php echo __('First Name'); ?></th>
+		<th><?php echo __('Middle Name'); ?></th>
+		<th><?php echo __('Last Name'); ?></th>
+		<th><?php echo __('Profile Image'); ?></th>
+		<th><?php echo __('Date Of Birth'); ?></th>
+		<th><?php echo __('Gender'); ?></th>
+		<th><?php echo __('Email Address'); ?></th>
+		<th><?php echo __('Mobile Number'); ?></th>
+		<th><?php echo __('Postal Address'); ?></th>
+		<th><?php echo __('Is Active'); ?></th>
+		<th><?php echo __('Is Deleted'); ?></th>
+		<th><?php echo __('Department Id'); ?></th>
+		<th><?php echo __('Temporary Password'); ?></th>
+		<th><?php echo __('Performance Points'); ?></th>
+		<th><?php echo __('Fax'); ?></th>
+		<th><?php echo __('Telephone No'); ?></th>
 		<th><?php echo __('Created'); ?></th>
 		<th><?php echo __('Modified'); ?></th>
 					<th class="actions"><?php echo __('Actions');?></th>
@@ -58,9 +84,25 @@
 		foreach ($group['User'] as $user): ?>
 		<tr>
 			<td><?php echo $user['id'];?></td>
+			<td><?php echo $user['group_id'];?></td>
 			<td><?php echo $user['username'];?></td>
 			<td><?php echo $user['password'];?></td>
-			<td><?php echo $user['group_id'];?></td>
+			<td><?php echo $user['first_name'];?></td>
+			<td><?php echo $user['middle_name'];?></td>
+			<td><?php echo $user['last_name'];?></td>
+			<td><?php echo $user['profile_image'];?></td>
+			<td><?php echo $user['date_of_birth'];?></td>
+			<td><?php echo $user['gender'];?></td>
+			<td><?php echo $user['email_address'];?></td>
+			<td><?php echo $user['mobile_number'];?></td>
+			<td><?php echo $user['postal_address'];?></td>
+			<td><?php echo $user['is_active'];?></td>
+			<td><?php echo $user['is_deleted'];?></td>
+			<td><?php echo $user['department_id'];?></td>
+			<td><?php echo $user['temporary_password'];?></td>
+			<td><?php echo $user['performance_points'];?></td>
+			<td><?php echo $user['fax'];?></td>
+			<td><?php echo $user['telephone_no'];?></td>
 			<td><?php echo $user['created'];?></td>
 			<td><?php echo $user['modified'];?></td>
 			<td class="actions">

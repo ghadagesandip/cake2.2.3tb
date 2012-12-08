@@ -18,23 +18,25 @@
 
 ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
 	<head>
 		<?php echo $this->Html->charset(); ?>
 		<title>
-			<?php echo __('Title') ?>
+			<?php echo __('Login') ?>
 		</title>
+		
 		<?php
-		echo $this->Html->meta('icon');
-
-		echo $this->Html->css(array('bootstrap.min','bootstrap-responsive','theme','font-awesome'));
-
-		echo $this->Html->script('jquery');
-		echo $this->Html->script('bootstrap.min');
-
-		echo $this->fetch('meta');
-		echo $this->fetch('css');
-		echo $this->fetch('script');
+			echo $this->Html->meta('icon');
+	
+			echo $this->Html->css(array('bootstrap.min','bootstrap-responsive','theme','font-awesome'));
+	
+			echo $this->Html->script('jquery');
+			echo $this->Html->script('bootstrap.min');
+	
+			echo $this->fetch('meta');
+			echo $this->fetch('css');
+			echo $this->fetch('script');
+			
 		?>
 		
 		   
@@ -56,7 +58,9 @@
             font-weight: bold;
         }
     </style>
-    
+    <style type="text/css">
+	  #flashMessage{'text-color':red;}
+	</style>
     
 	</head>
 	<body>

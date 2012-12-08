@@ -13,13 +13,18 @@ class UsersController extends AppController {
  * @return void
  */
 
-	public function beforeFilter() {
+    public function beforeFilter() {
         parent::beforeFilter();
-        $this->Auth->allow('add','logout');
+        $this->Auth->allow('add', 'logout');
     }
     
-    public function login() {
-    	$this->layout = 'login';
+	public function index() {
+		$this->User->recursive = 0;
+		$this->set('users', $this->paginate());
+	}
+
+	public function login() {
+		$this->layout='login';
 	    if ($this->request->is('post')) {
 	        if ($this->Auth->login()) {
 	            $this->redirect($this->Auth->redirect());
@@ -33,14 +38,6 @@ class UsersController extends AppController {
 	    $this->redirect($this->Auth->logout());
 	}
 
-
-    
-	public function index() {
-		$this->User->recursive = 0;
-		$this->set('users', $this->paginate());
-	}
-	
-	
 
 /**
  * view method
@@ -73,7 +70,8 @@ class UsersController extends AppController {
 			}
 		}
 		$groups = $this->User->Group->find('list');
-		$this->set(compact('groups'));
+		$departments = $this->User->Department->find('list');
+		$this->set(compact('groups', 'departments'));
 	}
 
 /**
@@ -99,7 +97,8 @@ class UsersController extends AppController {
 			$this->request->data = $this->User->read(null, $id);
 		}
 		$groups = $this->User->Group->find('list');
-		$this->set(compact('groups'));
+		$departments = $this->User->Department->find('list');
+		$this->set(compact('groups', 'departments'));
 	}
 
 /**

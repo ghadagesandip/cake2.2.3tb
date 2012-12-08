@@ -16,6 +16,8 @@
 	<?php
 		echo $this->Form->input('id');
 		echo $this->Form->input('group_name');
+		echo $this->Form->input('slug');
+		echo $this->Form->input('is_deleted');
 	?>
 		<div class="form-actions">
 <?php echo $this->Form->submit(__('Submit'),array('class'=>'btn btn-primary','div'=>false));?>

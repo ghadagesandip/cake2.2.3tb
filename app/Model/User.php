@@ -4,6 +4,7 @@ App::uses('AppModel', 'Model');
  * User Model
  *
  * @property Group $Group
+ * @property Department $Department
  */
 class User extends AppModel {
 
@@ -22,6 +23,13 @@ class User extends AppModel {
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
+		),
+		'Department' => array(
+			'className' => 'Department',
+			'foreignKey' => 'department_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
 		)
 	);
 	
@@ -31,4 +39,5 @@ class User extends AppModel {
 	    }
 	    return true;
 	}
+
 }

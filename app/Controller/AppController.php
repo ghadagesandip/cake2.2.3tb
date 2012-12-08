@@ -33,19 +33,19 @@ App::uses('Controller', 'Controller');
  */
 class AppController extends Controller {
 
-    public $helper=array('GoogleChart');
-    public $components = array(
-           'RequestHandler','Session',
-            'Auth' => array(
-	            'loginRedirect' => array('controller' => 'posts', 'action' => 'index'),
-	            'logoutRedirect' => array('controller' => 'users', 'action' => 'login'),
-	            'authenticate' => array( 'Form' => array('fields' => array('username' => 'email_address') ) ),
-             )
-    );
-    
-    
-    public function beforeFilter() {
-      
-    }
-
+  public $helper=array('Html', 'Session', 'Form','GoogleChart');
+  public $components = array(
+ 	 	 'RequestHandler','Session',
+ 		 'Auth' => array(
+            'loginRedirect' => array('controller' => 'Companies', 'action' => 'index'),
+            'logoutRedirect' => array('controller' => 'users', 'action' => 'login'),
+            'authenticate' => array(
+	            'Form' => array(
+	                'fields' => array('username' => 'email_address'),
+	                'scope'  => array('User.is_active' => 1)
+	            )
+	        )
+        )
+  );
+  
 }

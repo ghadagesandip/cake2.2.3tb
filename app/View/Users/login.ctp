@@ -5,7 +5,7 @@
                 <ul class="nav pull-right">
                     
                 </ul>
-                <a class="brand" href="index.html"><span class="first">Your</span> <span class="second">Company</span></a>
+                <a class="brand" href="index.html"><span class="first"></span> <span class="second">Sandip Ghadage</span></a>
             </div>
         </div>
     </div>
